@@ -47,7 +47,7 @@ function validateProjectID (req, res, next) {
         if(result) {
             next();
         } else {
-            res.status(400).JSON({message: "The specified project does not exist"})
+            res.status(404).JSON({message: "The specified Project does not exist"})
         }
     })
     .catch(err => {
